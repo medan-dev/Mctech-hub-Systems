@@ -1,5 +1,5 @@
-CREATE DATABASE if0_41690432_mctech_hub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE if0_41690432_mctech_hub;
+-- Database schema for Mctech-hub
+-- Import this directly into your pre-created database online
 
 -- Services Table
 CREATE TABLE services (
