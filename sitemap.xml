@@ -6,48 +6,48 @@
 
     <!-- ═══ HOMEPAGE — Highest Priority ═══ -->
     <url>
-        <loc>https://mctech-hub.com/</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- ═══ SERVICES PAGE ═══ -->
     <url>
-        <loc>https://mctech-hub.com/services.php</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/services.php</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <!-- ═══ PORTFOLIO PAGE ═══ -->
     <url>
-        <loc>https://mctech-hub.com/portfolio.php</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/portfolio.php</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- ═══ ABOUT PAGE ═══ -->
     <url>
-        <loc>https://mctech-hub.com/about.php</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/about.php</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <!-- ═══ BLOG PAGE ═══ -->
     <url>
-        <loc>https://mctech-hub.com/blog.php</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/blog.php</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- ═══ CONTACT PAGE ═══ -->
     <url>
-        <loc>https://mctech-hub.com/contact.php</loc>
-        <lastmod>2026-03-01</lastmod>
+        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/contact.php</loc>
+        <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>

@@ -8,8 +8,8 @@
 // ── Site-wide SEO defaults ──
 if (!defined('SITE_NAME'))    define('SITE_NAME', 'Mctech-hub Systems');
 if (!defined('SITE_TAGLINE')) define('SITE_TAGLINE', 'Best Website Developer, App Developer & Designer in Uganda | Mctech-hub Systems');
-if (!defined('SITE_DOMAIN'))  define('SITE_DOMAIN', 'mctech-hub.com');
-if (!defined('SITE_URL'))     define('SITE_URL', 'https://' . SITE_DOMAIN);
+if (!defined('SITE_DOMAIN'))  define('SITE_DOMAIN', $_SERVER['HTTP_HOST'] ?? 'mctech-hub.com');
+if (!defined('SITE_URL'))     define('SITE_URL', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . SITE_DOMAIN);
 if (!defined('SITE_PHONE'))   define('SITE_PHONE', '+256758611414');
 if (!defined('SITE_EMAIL'))   define('SITE_EMAIL', 'mctechhubsystems@gmail.com');
 if (!defined('SITE_LOGO'))    define('SITE_LOGO', '/mctech-hub/assets/images/logo3.png');
