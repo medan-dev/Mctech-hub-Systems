@@ -31,3 +31,4 @@ jobs:
           .github/
           database.sql
           setup-*.php
+          includes/config.php
