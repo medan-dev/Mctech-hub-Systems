@@ -1,8 +1,8 @@
 <?php
 /**
- * Mctech-hub Systems — Visitor Tracker
- * Lightweight middleware included on every public page via header.php
- * Tracks: page, referrer, device, browser, OS, IP, geo (cached per session)
+ * Mctech-hub Systems — Privacy-First Visitor Tracker
+ * Tracks: page, referrer, device, browser, OS.
+ * PII PROTECTED: No IP addresses or Geolocation captured.
  */
 function mct_trackVisit($pdo) {
     // Skip admin pages, AJAX calls, bots
@@ -33,30 +33,8 @@ function mct_trackVisit($pdo) {
     elseif  (preg_match('/tablet|ipad/i',  $ua))           $device = 'tablet';
     else                                                    $device = 'desktop';
 
-    // ── IP Address (handles proxies + CloudFlare) ──
-    $ip = $_SERVER['HTTP_CF_CONNECTING_IP']
-       ?? $_SERVER['HTTP_X_FORWARDED_FOR']
-       ?? $_SERVER['HTTP_X_REAL_IP']
-       ?? $_SERVER['REMOTE_ADDR']
-       ?? '0.0.0.0';
-    $ip = trim(explode(',', $ip)[0]);
-
-    // ── Geo (cached in session, looked up once per visitor session) ──
-    $country = $_SESSION['_mct_country'] ?? null;
-    $city    = $_SESSION['_mct_city']    ?? null;
-    if ($country === null && !in_array($ip, ['127.0.0.1', '::1', '0.0.0.0'])) {
-        try {
-            $ctx = stream_context_create(['http' => ['timeout' => 1.5, 'ignore_errors' => true]]);
-            $geo = @file_get_contents("http://ip-api.com/json/{$ip}?fields=country,city,status", false, $ctx);
-            if ($geo) {
-                $d = json_decode($geo, true);
-                $country = ($d['status'] ?? '') === 'success' ? ($d['country'] ?? '') : '';
-                $city    = ($d['status'] ?? '') === 'success' ? ($d['city']    ?? '') : '';
-            }
-        } catch (Exception $e) {}
-        $_SESSION['_mct_country'] = $country ?? '';
-        $_SESSION['_mct_city']    = $city    ?? '';
-    }
+    // IP Tracking Disabled as per security policy.
+    $ip_placeholder = 'ANON';
 
     // ── Is new visitor this session? ──
     $isNew = empty($_SESSION['_mct_visited']);
@@ -75,14 +53,14 @@ function mct_trackVisit($pdo) {
                 session_id(),
                 substr($uri, 0, 500),
                 $referrer,
-                $ip,
+                $ip_placeholder,
                 substr($ua, 0, 500),
                 $browser,
                 $os,
                 $device,
-                $country ?? '',
-                $city    ?? '',
+                'PRIVACY',
+                'PROTECTED',
                 $isNew ? 1 : 0,
             ]);
-    } catch (Exception $e) { /* silently fail — tracking never breaks the site */ }
+    } catch (Exception $e) { /* silently fail */ }
 }

@@ -1,4 +1,8 @@
 <?php
+// Include Security Firewall
+require_once __DIR__ . '/security.php';
+mct_firewall();
+
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -87,5 +91,29 @@ function getRecentLeads($pdo, $limit = 5) {
 // Security helper
 function sanitize($data) {
     return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
+}
+
+/**
+ * Securely validate image uploads
+ */
+function secureValidateImage($file) {
+    if ($file['error'] !== 0) return false;
+    
+    // Allowed types
+    $allowed_extensions = ['jpg', 'jpeg', 'png', 'webp', 'gif'];
+    $allowed_mimes      = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
+    
+    $extension = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+    $mime = finfo_file($finfo, $file['tmp_name']);
+    finfo_close($finfo);
+    
+    if (!in_array($extension, $allowed_extensions)) return false;
+    if (!in_array($mime, $allowed_mimes)) return false;
+    
+    // Check actual content
+    if (!@getimagesize($file['tmp_name'])) return false;
+    
+    return true;
 }
 ?>

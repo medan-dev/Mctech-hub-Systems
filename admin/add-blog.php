@@ -20,11 +20,15 @@ if ($_POST && isset($_POST['add_post'])) {
         $target_file = $upload_dir . $filename;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         
-        $check = getimagesize($_FILES['featured_image']['tmp_name']);
-        if ($check !== false) {
+        // Security: Unified multi-layer image validation
+        if (secureValidateImage($_FILES['featured_image'])) {
             if (move_uploaded_file($_FILES['featured_image']['tmp_name'], $target_file)) {
                 $image_path = 'blog/' . $filename;
             }
+        } else {
+            // Block invalid/malicious files immediately
+            header('HTTP/1.1 403 Forbidden');
+            die("Security Error: Invalid image file detected.");
         }
     }
 

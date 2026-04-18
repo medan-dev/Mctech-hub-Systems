@@ -15,7 +15,4 @@ Allow: /assets/js/
 Allow: /assets/images/
 
 # Sitemap location
-Sitemap: https://mctech-hub.com/sitemap.xml
-
-# Crawl delay (be polite to the server)
-Crawl-delay: 5
+Sitemap: https://mctech-hubsystems.kesug.com/sitemap.xml

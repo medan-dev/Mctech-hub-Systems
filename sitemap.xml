@@ -6,7 +6,7 @@
 
     <!-- ═══ HOMEPAGE — Highest Priority ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/</loc>
+        <loc>https://mctech-hubsystems.kesug.com/</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
     <!-- ═══ SERVICES PAGE ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/services.php</loc>
+        <loc>https://mctech-hubsystems.kesug.com/services.php</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
     <!-- ═══ PORTFOLIO PAGE ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/portfolio.php</loc>
+        <loc>https://mctech-hubsystems.kesug.com/portfolio.php</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
     <!-- ═══ ABOUT PAGE ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/about.php</loc>
+        <loc>https://mctech-hubsystems.kesug.com/about.php</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -38,7 +38,7 @@
 
     <!-- ═══ BLOG PAGE ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/blog.php</loc>
+        <loc>https://mctech-hubsystems.kesug.com/blog.php</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
@@ -46,7 +46,7 @@
 
     <!-- ═══ CONTACT PAGE ═══ -->
     <url>
-        <loc>https://if0-41690432-mctech-hub.infinityfreeapp.com/contact.php</loc>
+        <loc>https://mctech-hubsystems.kesug.com/contact.php</loc>
         <lastmod>2026-04-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>

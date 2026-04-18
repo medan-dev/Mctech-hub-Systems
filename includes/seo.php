@@ -7,7 +7,7 @@
 
 // ── Site-wide SEO defaults ──
 if (!defined('SITE_NAME'))    define('SITE_NAME', 'Mctech-hub Systems');
-if (!defined('SITE_TAGLINE')) define('SITE_TAGLINE', 'Best Website Developer, App Developer & Designer in Uganda | Mctech-hub Systems');
+if (!defined('SITE_TAGLINE')) define('SITE_TAGLINE', 'Best Tech, Professional Website Web & App Developer Near Me | Kampala, Africa, Global');
 if (!defined('SITE_DOMAIN'))  define('SITE_DOMAIN', $_SERVER['HTTP_HOST'] ?? 'mctech-hub.com');
 if (!defined('SITE_URL'))     define('SITE_URL', (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . SITE_DOMAIN);
 if (!defined('SITE_PHONE'))   define('SITE_PHONE', '+256758611414');
@@ -27,6 +27,24 @@ define('SEO_KEYWORDS_GLOBAL', implode(', ', [
     'freelance developer Uganda', 'developer near me', 'best developer Africa',
     'mobile developer Uganda', 'full stack developer Uganda', 'frontend developer Uganda',
     'backend developer Uganda', 'best developer East Africa',
+
+    // ═══ "TECH" & "GLOBAL" variations (Ultra-Aggressive) ═══
+    'tech', 'tech near me', 'tech Kampala', 'global tech', 'Africa tech', 'tech Africa',
+    'best tech', 'professional tech', 'tech professional', 'tech website', 'best tech website',
+    'tech global', 'global tech company', 'African tech agency', 'Kampala tech firm',
+    'top tech professional', 'professional tech near me',
+
+    // ═══ "WEBSITE WEB" & "BEST WEB" variations ═══
+    'website web', 'best web', 'website web near me', 'best web near me', 'best website web',
+    'website web professional', 'professional best web', 'website web Kampala', 'website web Africa',
+    'website web Global', 'best web Kampala', 'best web Africa', 'best web Global',
+
+    // ═══ "PROFESSIONAL" & "NEAR ME" & "LOCAL/GLOBAL" variations ═══
+    'professional near me', 'professional website near me', 'professional web near me',
+    'professional developer near me', 'professional designer near me', 'professional tech near me',
+    'best near me', 'best website near me', 'best web near me', 'best professional near me',
+    'Kampala near me', 'Africa near me', 'professional Africa', 'professional Global',
+    'best Global', 'best Africa', 'best in Kampala', 'best everywhere',
 
     // ═══ "DESIGNER" variations ═══
     'best designer in Uganda', 'designer Uganda', 'web designer Uganda',
@@ -104,8 +122,8 @@ define('SEO_KEYWORDS_GLOBAL', implode(', ', [
 function getPageSeo($page = 'home') {
     $pages = [
         'home' => [
-            'page_title'  => 'Best Website Developer, App Developer & Designer in Uganda',
-            'description' => 'Mctech-hub Systems is Uganda\'s best website developer, app developer & designer. We build stunning websites, mobile apps & AI solutions for businesses. Starting from UGX 300,000. Trusted by 35+ clients. Call +256758611414.',
+            'page_title'  => 'Best Tech & Professional Website Web Developer Near Me',
+            'description' => 'Looking for the best tech and professional website web developer near me? Mctech-hub Systems is Kampala\'s top global tech & app development agency. We build stunning tech solutions for businesses in Uganda, Africa & worldwide.',
             'keywords'    => SEO_KEYWORDS_GLOBAL,
             'og_type'     => 'website',
             'schema_type' => 'WebPage',
@@ -156,7 +174,7 @@ function getPageSeo($page = 'home') {
  */
 function renderSeoMeta($seo = []) {
     $title       = $seo['title']       ?? SITE_TAGLINE;
-    $description = $seo['description'] ?? 'Mctech-hub Systems is the best website developer, app developer and designer in Uganda. We build professional websites, mobile apps & AI solutions for businesses in Kampala, East Africa & worldwide. Starting from UGX 300,000.';
+    $description = $seo['description'] ?? 'Looking for the best tech and professional website web developer near me? Mctech-hub Systems builds top-tier global tech solutions, websites & apps for businesses in Kampala, Africa & worldwide.';
     $keywords    = $seo['keywords']    ?? SEO_KEYWORDS_GLOBAL;
     $canonical   = $seo['canonical']   ?? currentUrl();
     $ogImage     = $seo['og_image']    ?? SITE_URL . SITE_LOGO;
