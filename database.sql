@@ -1,5 +1,5 @@
-CREATE DATABASE mctech_hub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE mctech_hub;
+CREATE DATABASE if0_41690432_mctech_hub CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE if0_41690432_mctech_hub;
 
 -- Services Table
 CREATE TABLE services (

@@ -8,7 +8,7 @@ define('BASE_URL', '/mctech-hub/');
 $DB_HOST = 'localhost';
 $DB_USER = 'root';        // CHANGE THIS to your DB username
 $DB_PASS = '';            // CHANGE THIS to your DB password  
-$DB_NAME = 'mctech_hub';
+$DB_NAME = 'if0_41690432_mctech_hub';
 
 try {
     $pdo = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4", $DB_USER, $DB_PASS);
